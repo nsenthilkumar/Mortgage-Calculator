@@ -39,7 +39,7 @@ with inputs:
             sell_after = st.number_input("Sell after (years)", min_value=1, max_value=40, step=1, value=10, format="%i", help="After how many years do you expect to sell?")
             home_appreciation = st.number_input('Annual Home Appreciation (%)', min_value=0., max_value=1., step=0.001, value=0.035, format="%.3f", help="Expected annual home appreciation")
             asset_appreciation = st.number_input('Annual Asset Appreciation (%)', min_value=0., max_value=1., step=0.001, value=0.05, format="%.3f", help="Expected annual asset appreciation")
-            st.write("Expecte home value appreciation of " + '${:,.2f}'.format(-fin.fv(home_appreciation,sell_after,0,purchase_price,0)-purchase_price))
+            st.write("Expected home value appreciation of " + '${:,.2f}'.format(-fin.fv(home_appreciation,sell_after,0,purchase_price,0)-purchase_price))
 
 with outputs:
     
