@@ -98,26 +98,26 @@ with outputs:
                         st.write("You are " + '\${:,.0f}'.format(performance_data["Change in Net Worth"]) + " wealthier because while you lost " + '\${:,.0f}'.format(-performance_data["Operating Cash Flow B/(w)"]) + " on expenses" + " you made " + '\${:,.0f}'.format(performance_data["Cash on Cash Return"]) + " on sale of the house")                    
                 st.divider()
             else:
-                st.warning("You would be " + '${:,.0f}'.format(-performance_data["Change in Net Worth"]) + " wealthier renting.")
+                st.warning("You would be " + '\${:,.0f}'.format(-performance_data["Change in Net Worth"]) + " wealthier renting.")
 
-            st.text("You saved " + '${:,.0f}'.format(performance_data["Rent not Spent"]) + " in rent not spent but paid " + '${:,.0f}'.format(performance_data["Taxes and Maintanence"]) + " in taxes, maintanence, insurance")
+            st.write("You saved " + '\${:,.0f}'.format(performance_data["Rent not Spent"]) + " in rent not spent but paid " + '\${:,.0f}'.format(performance_data["Taxes and Maintanence"]) + " in taxes, maintanence, insurance")
             if performance_data["Operating Cash Flow B/(w)"] > 0:
-                st.text("Which means " + '${:,.0f}'.format(performance_data["Operating Cash Flow B/(w)"]) + " more in your pocket")
+                st.write("Which means " + '\${:,.0f}'.format(performance_data["Operating Cash Flow B/(w)"]) + " more in your pocket")
             else:
-                st.text("Which means you spent " + '${:,.0f}'.format(-performance_data["Operating Cash Flow B/(w)"]) + " more than renting")
+                st.write("Which means you spent " + '\${:,.0f}'.format(-performance_data["Operating Cash Flow B/(w)"]) + " more than renting")
             
             st.divider()
 
             if performance_data["Cash on Cash Return"] > 0:
-                st.text("You sold your house for " + '${:,.0f}'.format(performance_data["Home Value at Sale"]) + " but had to pay off principle of " + '${:,.0f}'.format(mortgage_data["Principle Owed"]))
-                st.text("That means you have " + '${:,.0f}'.format(performance_data["Cash Proceeds after Repayment"]) + " in your pocket" + " and you paid " + '${:,.0f}'.format(performance_data["Total Cash Contributed"]) + " on your mortgage")
-                st.text("Which means you made " + '${:,.0f}'.format(performance_data["Cash on Cash Return"]) + " on sale of the house")
+                st.write("You sold your house for " + '\${:,.0f}'.format(performance_data["Home Value at Sale"]) + " but had to pay off principle of " + '\${:,.0f}'.format(mortgage_data["Principle Owed"]))
+                st.write("That means you have " + '\${:,.0f}'.format(performance_data["Cash Proceeds after Repayment"]) + " in your pocket" + " and you paid " + '\${:,.0f}'.format(performance_data["Total Cash Contributed"]) + " on your mortgage")
+                st.write("Which means you made " + '\${:,.0f}'.format(performance_data["Cash on Cash Return"]) + " on sale of the house")
                 st.divider()
                 
             else:
-                st.text("You sold your house for " + '${:,.0f}'.format(performance_data["Home Value at Sale"]) + " but had to pay off principle of " + '${:,.0f}'.format(mortgage_data["Principle Owed"]))
-                st.text("That means you have " + '${:,.0f}'.format(performance_data["Cash Proceeds after Repayment"]) + " in your pocket" + " but you you paid " + '${:,.0f}'.format(performance_data["Total Cash Contributed"]) + " on your mortgage")
-                st.text("Which means you lost " + '${:,.0f}'.format(-performance_data["Cash on Cash Return"]) + " on the sale of your house")
+                st.write("You sold your house for " + '\${:,.0f}'.format(performance_data["Home Value at Sale"]) + " but had to pay off principle of " + '\${:,.0f}'.format(mortgage_data["Principle Owed"]))
+                st.write("That means you have " + '\${:,.0f}'.format(performance_data["Cash Proceeds after Repayment"]) + " in your pocket" + " but you you paid " + '\${:,.0f}'.format(performance_data["Total Cash Contributed"]) + " on your mortgage")
+                st.write("Which means you lost " + '\${:,.0f}'.format(-performance_data["Cash on Cash Return"]) + " on the sale of your house")
                 st.divider()
                 
             st.table(performance_df)
